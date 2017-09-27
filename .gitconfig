@@ -1,5 +1,9 @@
+[color]
+	ui = true
+[merge]
+	defaultToUpstream = true
+[push]
+	default = simple
 [user]
 	name = Hernan Silva
 	email = hachesilva@gmail.com
-[color]
-	ui = true
