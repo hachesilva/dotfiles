@@ -3,6 +3,8 @@ alias ls="ls -G"
 alias ll="ls -laG"
 alias pwd='pwd; pwd|pbcopy' # Copy any path from pwd command to clipboard
 
+alias apache-rs="/etc/init.d/apache2 restart"
+
 ## Git aliases
 alias ggch="git checkout"
 alias ggcm="git commit -m"
