@@ -87,6 +87,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Add colors to man
+man() {
+    env \
+    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+    LESS_TERMCAP_md=$(printf "\e[1;31m") \
+    LESS_TERMCAP_me=$(printf "\e[0m") \
+    LESS_TERMCAP_se=$(printf "\e[0m") \
+    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+    LESS_TERMCAP_ue=$(printf "\e[0m") \
+    LESS_TERMCAP_us=$(printf "\e[1;32m") \
+    man "$@"
+}
+
 
 ## Universal aliases
 alias ls="ls -FGv --color=auto --time-style=long-iso"  # F: Mark folders, G: No group info, v: Natural order
@@ -99,6 +112,14 @@ if [[ $(uname) = 'Linux' ]]; then
 fi
 
 alias pwd='pwd; pwd|pbcopy' # Copy any path from pwd command to clipboard
+alias mk='mkdir -p'
+function mkd () { mkdir -p "$@" && cd "$@"; }
+
+alias ydl='youtube-dl'
+alias ydlm='youtube-dl -x --audio-format mp3 --audio-quality 320K'
+
+alias untar='tar xvf'
+alias h='history'
 
 ## Git aliases
 alias gga="git add"
