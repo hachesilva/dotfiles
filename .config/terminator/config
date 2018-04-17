@@ -1,0 +1,30 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  homogeneous_tabbar = False
+  scroll_tabbar = True
+  title_inactive_bg_color = "#606060"
+  title_inactive_fg_color = "#aaaaaa"
+  title_transmit_bg_color = "#202020"
+  title_transmit_fg_color = "#aaaaaa"
+  window_state = maximise
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    audible_bell = True
+    background_color = "#1c1420"
+    background_image = None
+    copy_on_selection = True
+    font = Hack 10
+    foreground_color = "#ffffff"
+    palette = "#222222:#e8333d:#b7ce42:#f99e30:#5dc2d9:#bb1856:#6d878d:#dddddd:#666666:#c71f1f:#bde077:#ffe863:#99dcbb:#e6538c:#276e7d:#cccccc"
+    use_system_font = False
