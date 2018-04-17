@@ -4,7 +4,7 @@ export TERM="xterm-256color"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/hachesilva/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -111,7 +111,7 @@ if [[ $(uname) = 'Linux' ]]; then
     alias pbpaste='xclip -selection clipboard -o' # Use xclip on linux, pbcopy on Mac
 fi
 
-alias pwd='pwd; pwd|pbcopy' # Copy any path from pwd command to clipboard
+alias pw='pwd; pwd|pbcopy' # Copy any path from pwd command to clipboard
 alias mk='mkdir -p'
 function mkd () { mkdir -p "$@" && cd "$@"; }
 
