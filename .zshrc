@@ -4,13 +4,16 @@ export TERM="xterm-256color"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/hachesilva/.oh-my-zsh
+  export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+DEFAULT_USER="hernan"
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,7 +57,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git sudo)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,7 +114,7 @@ if [[ $(uname) = 'Linux' ]]; then
     alias pbpaste='xclip -selection clipboard -o' # Use xclip on linux, pbcopy on Mac
 fi
 
-alias pwd='pwd; pwd|pbcopy' # Copy any path from pwd command to clipboard
+alias pw='pwd; pwd|pbcopy' # Copy any path from pwd command to clipboard
 alias mk='mkdir -p'
 function mkd () { mkdir -p "$@" && cd "$@"; }
 
