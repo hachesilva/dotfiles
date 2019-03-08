@@ -2,12 +2,16 @@
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   homogeneous_tabbar = False
   scroll_tabbar = True
-  title_inactive_bg_color = "#606060"
-  title_inactive_fg_color = "#aaaaaa"
-  title_transmit_bg_color = "#202020"
-  title_transmit_fg_color = "#aaaaaa"
+  title_inactive_bg_color = "#4C566A"
+  title_inactive_fg_color = "#D8DEE9"
+  title_receive_bg_color = "#8FBCBB"
+  title_receive_fg_color = "#2E3440"
+  title_transmit_bg_color = "#88C0D0"
+  title_transmit_fg_color = "#2E3440"
   window_state = maximise
 [keybindings]
+  full_screen = None
+  hide_window = F11
 [layouts]
   [[default]]
     [[[child1]]]
@@ -28,3 +32,42 @@
     foreground_color = "#ffffff"
     palette = "#222222:#e8333d:#b7ce42:#f99e30:#5dc2d9:#bb1856:#6d878d:#dddddd:#666666:#c71f1f:#bde077:#ffe863:#99dcbb:#e6538c:#276e7d:#cccccc"
     use_system_font = False
+  [[Argonaut]]
+    audible_bell = True
+    background_color = "#140d17"
+    background_image = None
+    copy_on_selection = True
+    cursor_color = "#ff0018"
+    font = Hack 10
+    foreground_color = "#fffaf4"
+    palette = "#232323:#ff000f:#8ce10b:#ffb900:#008df8:#6d43a6:#00d8eb:#ffffff:#444444:#ff2740:#abe15b:#ffd242:#0092ff:#9a5feb:#67fff0:#ffffff"
+    use_system_font = False
+  [[Monokai Vivid]]
+    background_color = "#121212"
+    background_image = None
+    cursor_color = "#fb0007"
+    foreground_color = "#f9f9f9"
+    palette = "#121212:#fa2934:#98e123:#fff30a:#0443ff:#f800f8:#01b6ed:#ffffff:#838383:#f6669d:#b1e05f:#fff26d:#0443ff:#f200f6:#51ceff:#ffffff"
+  [[OceanicMaterial]]
+    background_color = "#1c262b"
+    background_image = None
+    cursor_color = "#b3b8c3"
+    foreground_color = "#c2c8d7"
+    palette = "#000000:#ee2b2a:#40a33f:#ffea2e:#1e80f0:#8800a0:#16afca:#a4a4a4:#777777:#dc5c60:#70be71:#fff163:#54a4f3:#aa4dbc:#42c7da:#ffffff"
+  [[Pandora]]
+    background_color = "#141e43"
+    background_image = None
+    cursor_color = "#43d58e"
+    foreground_color = "#e1e1e1"
+    palette = "#000000:#ff4242:#74af68:#ffad29:#338f86:#9414e6:#23d7d7:#e2e2e2:#3f5648:#ff3242:#74cd68:#ffb929:#23d7d7:#ff37ff:#00ede1:#ffffff"
+  [[Purple Rain]]
+    background_color = "#21084a"
+    background_image = None
+    cursor_color = "#ff271d"
+    foreground_color = "#fffbf6"
+    palette = "#000000:#ff260e:#9be205:#ffc400:#00a2fa:#815bb5:#00deef:#ffffff:#565656:#ff4250:#b8e36e:#ffd852:#00a6ff:#ac7bf0:#74fdf3:#ffffff"
+  [[Ubuntu]]
+    background_color = "#300a24"
+    background_image = None
+    cursor_color = "#bbbbbb"
+    foreground_color = "#eeeeec"
