@@ -1,4 +1,5 @@
 export TERM="xterm-256color"
+. ~/.oh-my-zsh/plugins/z/z.sh
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -11,6 +12,8 @@ export TERM="xterm-256color"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+DEFAULT_USER="hernan"
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -54,7 +57,11 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  sudo
+  z
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -131,6 +138,11 @@ alias ggst="git status"
 alias ggad="git add"
 alias ggpu="git push"
 alias gguncm="git reset --soft HEAD~1" # Undo last commit
+alias ggdiffvsbranch="git diff --name-status" # See current branch's changed files against other branch. expects BRANCHNAME as parameter
 
 ## Add syntax highlighting to zsh. Must be last line
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+alias killzombie="kill $(ps -A -ostat,ppid | awk '/[zZ]/ && !a[$2]++ {print $2}')"
+alias zombie="ps aux | grep Z"
+alias parentp="ps -o ppid= -p" ## Parameter would be process id

@@ -7,3 +7,5 @@
 [user]
 	name = Hernan Silva
 	email = hachesilva@gmail.com
+[core]
+	autocrlf = input
