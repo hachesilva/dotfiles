@@ -11,7 +11,7 @@ export TERM="xterm-256color"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 DEFAULT_USER="hernan"
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
@@ -61,6 +61,10 @@ plugins=(
   git
   sudo
   z
+  alias-tips
+  undollar
+  ls
+  dircolors-material
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -94,55 +98,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Add colors to man
-man() {
-    env \
-    LESS_TERMCAP_mb=$(printf "\e[1;31m") \
-    LESS_TERMCAP_md=$(printf "\e[1;31m") \
-    LESS_TERMCAP_me=$(printf "\e[0m") \
-    LESS_TERMCAP_se=$(printf "\e[0m") \
-    LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
-    LESS_TERMCAP_ue=$(printf "\e[0m") \
-    LESS_TERMCAP_us=$(printf "\e[1;32m") \
-    man "$@"
-}
+source $HOME/.bash_aliases
 
-
-## Universal aliases
-alias ls="ls -FGv --color=auto --time-style=long-iso"  # F: Mark folders, G: No group info, v: Natural order
-alias ll="ls -la"
-alias l="ls -1"
-
-if [[ $(uname) = 'Linux' ]]; then
-    alias pbcopy='xclip -selection clipboard' # Use xclip on linux, pbcopy on Mac
-    alias pbpaste='xclip -selection clipboard -o' # Use xclip on linux, pbcopy on Mac
-fi
-
-alias pw='pwd; pwd|pbcopy' # Copy any path from pwd command to clipboard
-alias mk='mkdir -p'
-function mkd () { mkdir -p "$@" && cd "$@"; }
-
-alias ydl='youtube-dl'
-alias ydlm='youtube-dl -x --audio-format mp3 --audio-quality 320K'
-
-alias untar='tar xvf'
-alias h='history'
-
-## Git aliases
-alias gga="git add"
-alias ggs="git status"
-alias ggd="git diff"
-alias ggch="git checkout"
-alias ggcm="git commit -m"
-alias ggst="git status"
-alias ggad="git add"
-alias ggpu="git push"
-alias gguncm="git reset --soft HEAD~1" # Undo last commit
-alias ggdiffvsbranch="git diff --name-status" # See current branch's changed files against other branch. expects BRANCHNAME as parameter
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="ALIAS TIP: "
 
 ## Add syntax highlighting to zsh. Must be last line
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-alias killzombie="kill $(ps -A -ostat,ppid | awk '/[zZ]/ && !a[$2]++ {print $2}')"
-alias zombie="ps aux | grep Z"
-alias parentp="ps -o ppid= -p" ## Parameter would be process id
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
