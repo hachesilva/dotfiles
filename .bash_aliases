@@ -16,14 +16,16 @@ alias ls="ls -FGv --color=auto --time-style=long-iso"  # F: Mark folders, G: No 
 alias ll="ls -la"
 alias l="ls -1"
 
+## Copy and paste from command line
 if [[ $(uname) = 'Linux' ]]; then
     alias pbcopy='xclip -selection clipboard' # Use xclip on linux, pbcopy on Mac
     alias pbpaste='xclip -selection clipboard -o' # Use xclip on linux, pbcopy on Mac
 fi
 
-alias pw='pwd; pwd | pbcopy' # Copy any path from pwd command to clipboard
-alias mk='mkdir -p'
-function mkd () { mkdir -p "$@" && cd "$@"; }
+## Directory aliases
+alias pw='pwd; pwd | pbcopy' # Always copy path to clipboard when executing pwd
+alias mk='mkdir -p' # Create directory even if parents don't exist
+function mkd () { mkdir -p "$@" && cd "$@"; } # Create directory and cd into it
 
 alias ydl='youtube-dl'
 alias ydlm='youtube-dl -x --audio-format mp3 --audio-quality 320K'
@@ -32,17 +34,33 @@ alias untar='tar xvf'
 alias h='history'
 
 ## Git aliases
-alias gga="git add"
-alias ggs="git status"
-alias ggd="git diff"
-alias ggch="git checkout"
-alias ggcm="git commit -m"
-alias ggst="git status"
-alias ggad="git add"
-alias ggpu="git push"
-alias gguncm="git reset --soft HEAD~1" # Undo last commit
-alias ggdiffvsbranch="git diff --name-status" # See current branch's changed files against other branch. expects BRANCHNAME as parameter
-function cpgb () { git branch | grep "*" | awk '{ print $2 }' | pbcopy } # Copy current branch name
+function gbcp () { git branch | grep "*" | awk '{ print $2 }' | pbcopy } # Copy current branch name
+
+alias g="git"
+alias ga="git add"
+alias gaa="git add --all"
+alias gb="git branch"
+alias gbD="git branch"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias gcod="git checkout develop"
+alias gcom="git checkout master"
+alias gd="git diff"
+alias gdb="git diff --name-status" # See current branch's changed files against other branch. expects BRANCHNAME as parameter
+alias gdc="git diff --cached"
+alias gf="git fetch"
+alias gi="git init"
+alias gm="git merge"
+alias gpl="git pull"
+alias gps="git push"
+alias grm="git rm"
+alias gs="git status"
+alias gst="git stash"
+alias gsta="git stash apply"
+alias gstl="git stash list"
+alias gundo="git reset --soft HEAD~1" # Undo last commit
 
 ## Extras
 alias killzombie="kill $(ps -A -ostat,ppid | awk '/[zZ]/ && !a[$2]++ {print $2}')"

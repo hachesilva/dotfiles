@@ -58,7 +58,6 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
   sudo
   z
   alias-tips
