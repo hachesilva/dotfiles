@@ -31,7 +31,9 @@
     font = Hack 10
     foreground_color = "#ffffff"
     palette = "#222222:#e8333d:#b7ce42:#f99e30:#5dc2d9:#bb1856:#6d878d:#dddddd:#666666:#c71f1f:#bde077:#ffe863:#99dcbb:#e6538c:#276e7d:#cccccc"
+    urgent_bell = True
     use_system_font = False
+    visible_bell = True
   [[Argonaut]]
     audible_bell = True
     background_color = "#140d17"
