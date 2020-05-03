@@ -16,6 +16,18 @@ alias ls="ls -FGv --color=auto --time-style=long-iso"  # F: Mark folders, G: No 
 alias ll="ls -la"
 alias l="ls -1"
 
+## Prompt for file name if no second parameter is present when using mv
+## Source: https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
+function mv() {
+  if [ "$#" -ne 1 ] || [ ! -e "$1" ]; then
+    command mv "$@"
+    return
+  fi
+
+  read -ei "$1" newfilename
+  command mv -v -- "$1" "$newfilename"
+}
+
 ## Copy and paste from command line
 if [[ $(uname) = 'Linux' ]]; then
     alias pbcopy='xclip -selection clipboard' # Use xclip on linux, pbcopy on Mac
