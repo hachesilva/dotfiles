@@ -12,7 +12,7 @@ export TERM="xterm-256color"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
-DEFAULT_USER="hernan"
+DEFAULT_USER="hachesilva"
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
 # Uncomment the following line to use case-sensitive completion.
