@@ -63,7 +63,7 @@ plugins=(
   alias-tips
   undollar
   ls
-  dircolors-material
+  material-colors
 )
 
 source $ZSH/oh-my-zsh.sh
