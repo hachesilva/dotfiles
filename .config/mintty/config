@@ -1,5 +1,5 @@
 # To use common configuration in %APPDATA%\mintty, simply remove this file
-Font=DejaVu Sans Mono for Powerline
+Font=DejaVuSansMono NF
 ThemeFile=hachesilva2.minttyrc
 BackgroundColour=20,0,40
 BellType=0
