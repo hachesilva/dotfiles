@@ -83,3 +83,6 @@ alias parentp="ps -o ppid= -p" ## Parameter would be process id
 alias install="sudo apt-get install"
 alias remove="sudo apt-get remove --purge"
 
+## WSL
+alias expl="explorer.exe"
+
