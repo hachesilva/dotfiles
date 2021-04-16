@@ -3,7 +3,7 @@
 [merge]
 	defaultToUpstream = true
 [push]
-	default = simple
+	default = current
 [user]
 	name = Hernan Silva
 	email = hachesilva@gmail.com

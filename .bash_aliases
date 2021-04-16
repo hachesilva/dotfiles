@@ -48,30 +48,32 @@ alias h='history'
 ## Git aliases
 function gbcp () { git branch | grep "*" | awk '{ print $2 }' | pbcopy } # Copy current branch name
 
-alias g="git"
-alias ga="git add"
-alias gaa="git add --all"
-alias gb="git branch"
-alias gbD="git branch"
-alias gc="git commit"
-alias gcm="git commit -m"
-alias gco="git checkout"
-alias gcob="git checkout -b"
-alias gcod="git checkout develop"
-alias gcom="git checkout master"
-alias gd="git diff"
-alias gdb="git diff --name-status" # See current branch's changed files against other branch. expects BRANCHNAME as parameter
-alias gdc="git diff --cached"
-alias gf="git fetch"
-alias gi="git init"
-alias gm="git merge"
-alias gpl="git pull"
-alias gps="git push"
-alias grm="git rm"
-alias gs="git status"
-alias gst="git stash"
-alias gsta="git stash apply"
-alias gstl="git stash list"
+alias     g="git"
+alias    ga="git add"
+alias   gaa="git add --all"
+alias    gb="git branch"
+alias   gbD="git branch"
+alias    gc="git commit"
+alias   gcm="git commit -m"
+alias   gco="git checkout"
+alias  gcob="git checkout -b"
+alias  gcod="git checkout develop"
+alias  gcom="git checkout master"
+alias    gd="git diff"
+alias   gdb="git diff --name-status" # See current branch's changed files against other branch. expects BRANCHNAME as parameter
+alias   gdc="git diff --cached"
+alias    gf="git fetch"
+alias    gi="git init"
+alias  glog="git log"
+alias    gl="git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit"
+alias    gm="git merge"
+alias   gpl="git pull"
+alias   gps="git push"
+alias   grm="git rm"
+alias    gs="git status"
+alias   gst="git stash"
+alias  gsta="git stash apply"
+alias  gstl="git stash list"
 alias gundo="git reset --soft HEAD~1" # Undo last commit
 
 ## Extras
@@ -79,7 +81,7 @@ alias killzombie="kill $(ps -A -ostat,ppid | awk '/[zZ]/ && !a[$2]++ {print $2}'
 alias zombie="ps aux | grep Z"
 alias parentp="ps -o ppid= -p" ## Parameter would be process id
 
-## OS app install/remove
+## Linux app install/remove
 alias install="sudo apt-get install"
 alias remove="sudo apt-get remove --purge"
 
