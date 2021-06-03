@@ -12,6 +12,8 @@ man() {
 }
 
 ## Universal aliases
+alias myip="curl ipinfo.io"
+alias ipinfo="curl ipinfo.io"
 alias ls="ls -FGv --color=auto --time-style=long-iso"  # F: Mark folders, G: No group info, v: Natural order
 alias ll="ls -la"
 alias l="ls -1"
