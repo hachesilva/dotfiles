@@ -36,6 +36,13 @@ if [[ $(uname) = 'Linux' ]]; then
     alias pbpaste='xclip -selection clipboard -o' # Use xclip on linux, pbcopy on Mac
 fi
 
+## Alias yank to yank | clip.exe when in WSL
+if grep -q Microsoft /proc/version; then
+  alias yank-cli="yank-cli | clip.exe"
+fi
+
+alias yank="yank-cli"
+
 ## Directory aliases
 alias pw='pwd; pwd | pbcopy' # Always copy path to clipboard when executing pwd
 alias mk='mkdir -p' # Create directory even if parents don't exist
