@@ -11,12 +11,23 @@ man() {
     man "$@"
 }
 
+## Update zsh plugins and themes
+function upzsh() {
+  cd ~/.oh-my-zsh/custom/plugins
+  gplall
+
+  cd ~/.oh-my-zsh/custom/themes
+  gplall
+}
+
 ## Universal aliases
-alias myip="curl ipinfo.io"
+alias h='history'
 alias ipinfo="curl ipinfo.io"
+alias myip="curl ipinfo.io"
 alias ls="ls -FGv --color=auto --time-style=long-iso"  # F: Mark folders, G: No group info, v: Natural order
 alias ll="ls -la"
 alias l="ls -1"
+alias untar='tar xvf'
 
 ## Prompt for file name if no second parameter is present when using mv
 ## Source: https://gist.github.com/premek/6e70446cfc913d3c929d7cdbfe896fef
@@ -48,11 +59,10 @@ alias pw='pwd; pwd | pbcopy' # Always copy path to clipboard when executing pwd
 alias mk='mkdir -p' # Create directory even if parents don't exist
 function mkd () { mkdir -p "$@" && cd "$@"; } # Create directory and cd into it
 
+## Alias youtube-dl
 alias ydl='youtube-dl'
 alias ydlm='youtube-dl -x --audio-format mp3 --audio-quality 320K'
 
-alias untar='tar xvf'
-alias h='history'
 
 ## Git aliases
 function gbcp () { git branch | grep "*" | awk '{ print $2 }' | pbcopy } # Copy current branch name
@@ -84,8 +94,17 @@ alias   gst="git stash"
 alias  gsta="git stash apply"
 alias  gstl="git stash list"
 alias gundo="git reset --soft HEAD~1" # Undo last commit
+## Git pull all subfolders
+function gplall() {
+  for d in */ ; do
+    echo "ACCESING $d"
+    cd "$d"
+    git pull
+    cd ..
+  done
+}
 
-## Extras
+## Processes
 alias killzombie="kill $(ps -A -ostat,ppid | awk '/[zZ]/ && !a[$2]++ {print $2}')"
 alias zombie="ps aux | grep Z"
 alias parentp="ps -o ppid= -p" ## Parameter would be process id
