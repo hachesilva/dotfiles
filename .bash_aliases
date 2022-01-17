@@ -60,9 +60,10 @@ alias mk='mkdir -p' # Create directory even if parents don't exist
 function mkd () { mkdir -p "$@" && cd "$@"; } # Create directory and cd into it
 
 ## Alias youtube-dl
-alias ydl='youtube-dl'
-alias ydlm='youtube-dl -x --audio-format mp3 --audio-quality 320K'
-
+# alias ydl='youtube-dl'
+# alias ydlm='youtube-dl -x --audio-format mp3 --audio-quality 320K'
+alias ydl='yt-dlp'
+alias ydlm='yt-dlp -x --audio-format mp3 --audio-quality 320K'
 
 ## Git aliases
 function gbcp () { git branch | grep "*" | awk '{ print $2 }' | pbcopy } # Copy current branch name

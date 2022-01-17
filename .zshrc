@@ -103,9 +103,6 @@ source $HOME/.bash_aliases
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="ALIAS TIP: "
 
-## Add syntax highlighting to zsh. Must be last line
-source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NVM_DIR="$HOME/.nvm"
@@ -114,3 +111,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+## Add syntax highlighting to zsh. Must be last line
+source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
