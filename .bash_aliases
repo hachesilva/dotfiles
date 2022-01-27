@@ -13,11 +13,13 @@ man() {
 
 ## Update zsh plugins and themes
 function upzsh() {
+  INITIAL_LOCATION=$(pwd)
   cd ~/.oh-my-zsh/custom/plugins
   gplall
 
   cd ~/.oh-my-zsh/custom/themes
   gplall
+  cd ${INITIAL_LOCATION}
 }
 
 ## Universal aliases
