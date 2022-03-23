@@ -26,7 +26,14 @@ function upzsh() {
 alias h='history'
 alias ipinfo="curl ipinfo.io"
 alias myip="curl ipinfo.io"
-alias ls="ls -FGv --color=auto --time-style=long-iso"  # F: Mark folders, G: No group info, v: Natural order
+if [ $(uname) = 'Linux' ]; then
+      # Use ls in Linux
+    alias ls='ls -FGv --color=auto --time-style=long-iso'
+else
+    # Use gls instead of ls in Mac
+    alias ls='gls -FGv --color=auto --time-style=long-iso'
+fi
+# alias ls="ls -FGv --color=auto --time-style=long-iso"  # F: Mark folders, G: No group info, v: Natural order
 alias ll="ls -la"
 alias l="ls -1"
 alias untar='tar xvf'
