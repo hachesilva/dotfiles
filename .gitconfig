@@ -9,3 +9,4 @@
 	email = hachesilva@gmail.com
 [core]
 	autocrlf = input
+	excludesFile = ~/.gitignore
