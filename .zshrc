@@ -1,5 +1,5 @@
 export TERM="xterm-256color"
-. ~/.oh-my-zsh/plugins/z/z.sh
+. ~/.oh-my-zsh/plugins/z/z.plugin.zsh
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
