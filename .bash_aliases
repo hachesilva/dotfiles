@@ -103,6 +103,7 @@ alias    gs="git status"
 alias   gst="git stash"
 alias  gsta="git stash apply"
 alias  gstl="git stash list"
+alias  gtag="git tag -a"
 alias gundo="git reset --soft HEAD~1" # Undo last commit
 ## Git pull all subfolders
 function gplall() {
