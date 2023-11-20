@@ -80,7 +80,7 @@ plugins=(
   alias-tips
   undollar
   ls
-  material-colors
+  dircolors-neutral
 )
 
 ZSH_DISABLE_COMPFIX=true
