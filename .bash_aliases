@@ -77,6 +77,8 @@ alias ydlm='yt-dlp -x --audio-format mp3 --audio-quality 320K'
 ## Git aliases
 function gbcp () { git branch | grep "*" | awk '{ print $2 }' | pbcopy } # Copy current branch name
 
+function gcrepo() { git clone git@github.com:$1.git ${2-} } #clone a GitHub repo using username/reponame
+
 alias     g="git"
 alias    ga="git add"
 alias   gaa="git add --all"
