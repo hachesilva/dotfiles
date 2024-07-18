@@ -1,0 +1,57 @@
+{
+  "schemes" : [
+    {
+      "scrolling" : {
+        "speed" : {
+          "vertical" : 20
+        },
+        "reverse" : {
+          "vertical" : true
+        },
+        "acceleration" : {
+          "vertical" : 2
+        }
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0xc52b",
+          "productName" : "USB Receiver",
+          "category" : "mouse",
+          "vendorID" : "0x46d"
+        }
+      },
+      "buttons" : {
+        "universalBackForward" : false
+      }
+    },
+    {
+      "pointer" : {
+        "speed" : 0.0863,
+        "disableAcceleration" : false,
+        "acceleration" : 1.0769
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "productID" : "0xb02a",
+          "category" : "mouse",
+          "productName" : "Logi M650 L",
+          "serialNumber" : "8BB53437"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true,
+          "horizontal" : false
+        },
+        "speed" : {
+          "vertical" : 2
+        },
+        "acceleration" : {
+          "vertical" : 1
+        }
+      }
+    }
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5"
+}
