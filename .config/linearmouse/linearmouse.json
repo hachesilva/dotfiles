@@ -1,23 +1,28 @@
 {
   "schemes" : [
     {
+      "pointer" : {
+        "speed" : 0.08,
+        "disableAcceleration" : false,
+        "acceleration" : 0.9
+      },
       "scrolling" : {
-        "speed" : {
-          "vertical" : 20
+        "acceleration" : {
+          "vertical" : 2
         },
         "reverse" : {
           "vertical" : true
         },
-        "acceleration" : {
-          "vertical" : 2
+        "speed" : {
+          "vertical" : 20
         }
       },
       "if" : {
         "device" : {
           "productID" : "0xc52b",
+          "vendorID" : "0x46d",
           "productName" : "USB Receiver",
-          "category" : "mouse",
-          "vendorID" : "0x46d"
+          "category" : "mouse"
         }
       },
       "buttons" : {
@@ -25,16 +30,11 @@
       }
     },
     {
-      "pointer" : {
-        "speed" : 0.0863,
-        "disableAcceleration" : false,
-        "acceleration" : 1.0769
-      },
       "if" : {
         "device" : {
+          "category" : "mouse",
           "vendorID" : "0x46d",
           "productID" : "0xb02a",
-          "category" : "mouse",
           "productName" : "Logi M650 L",
           "serialNumber" : "8BB53437"
         }
@@ -50,8 +50,74 @@
         "acceleration" : {
           "vertical" : 1
         }
+      },
+      "pointer" : {
+        "speed" : 0.0863,
+        "disableAcceleration" : false,
+        "acceleration" : 1.0769
+      }
+    },
+    {
+      "pointer" : {
+        "acceleration" : 0.8,
+        "speed" : 0.09
+      },
+      "if" : {
+        "device" : {
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x0",
+          "productID" : "0x0",
+          "category" : "trackpad"
+        }
+      }
+    },
+    {
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true,
+          "horizontal" : false
+        }
+      },
+      "if" : {
+        "device" : {
+          "productID" : "0xb02a",
+          "productName" : "Logi M650 L",
+          "vendorID" : "0x46d",
+          "category" : "mouse",
+          "serialNumber" : "E6452E0B"
+        }
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "control" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "v"
+              ]
+            },
+            "command" : false,
+            "button" : 3,
+            "shift" : false,
+            "option" : false
+          },
+          {
+            "button" : 4,
+            "command" : false,
+            "shift" : false,
+            "control" : false,
+            "option" : false,
+            "action" : {
+              "keyPress" : [
+                "command",
+                "c"
+              ]
+            }
+          }
+        ]
       }
     }
   ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5"
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
 }
