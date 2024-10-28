@@ -129,3 +129,6 @@ alias remove="sudo apt-get remove --purge"
 ## WSL
 alias expl="explorer.exe"
 
+## Mac
+alias mactime="sudo sntp -sS time.apple.com"
+
